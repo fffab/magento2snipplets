@@ -12,7 +12,7 @@ $fileName   = 'payment.log';
 
 ```cli
 php bin/magento module:status
-php bin/magento module:enable MVendor_Module
-php bin/magento module:disable MVendor_Module
-php bin/magento module:uninstall MVendor_Module
+php bin/magento module:enable Vendor_Module
+php bin/magento module:disable Vendor_Module
+php bin/magento module:uninstall Vendor_Module
 ```
