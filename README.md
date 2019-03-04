@@ -3,7 +3,7 @@ Some quickies Magento 2 snipplets
 
 ###### Login with \Alekseon\Logger\Logger
 ```php
-$message    = $observer->getEvent()->getMethodInstance()->getCode();
+$message    = 'something';
 $fileName   = 'payment.log';
 \Alekseon\Logger\Logger::info($message, $fileName);
 ```
