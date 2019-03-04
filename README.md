@@ -2,6 +2,7 @@
 Some quickies Magento 2 snipplets
 
 ###### Login with \Alekseon\Logger\Logger
+https://packagist.org/packages/alekseon/logger
 ```php
 $message    = 'something';
 $fileName   = 'payment.log';
