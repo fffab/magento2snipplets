@@ -17,3 +17,12 @@ php bin/magento module:enable Vendor_Module
 php bin/magento module:disable Vendor_Module
 php bin/magento module:uninstall Vendor_Module
 ```
+
+###### php bin/magento cache
+```cli
+php bin/magento cache:status
+php bin/magento cache:disable
+php bin/magento cache:enable
+php bin/magento cache:clear - c:c
+php bin/magento cache:flush - c:f
+```
