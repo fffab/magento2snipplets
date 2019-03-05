@@ -30,7 +30,7 @@ php bin/magento cache:flush - c:f
 ```php
 $_myHelper = $this->helper('Vendor\Module\Helper\Helpername');
 $_myHelper->myFunction();
-```php
+```
 
 ###### call static cms bloc in phtml, fast
 ```php
