@@ -26,3 +26,8 @@ php bin/magento cache:enable
 php bin/magento cache:clear - c:c
 php bin/magento cache:flush - c:f
 ```
+###### call helper in phtml, fast
+```php
+$_myHelper = $this->helper('Vendor\Module\Helper\Helpername');
+$_myHelper->myFunction();
+```php
