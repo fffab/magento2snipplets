@@ -31,3 +31,8 @@ php bin/magento cache:flush - c:f
 $_myHelper = $this->helper('Vendor\Module\Helper\Helpername');
 $_myHelper->myFunction();
 ```php
+
+###### call static cms bloc in phtml, fast
+```php
+echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('blockIdentifier')->toHtml();
+```
