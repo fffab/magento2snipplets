@@ -41,3 +41,12 @@ echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('bl
 ```php
 $this->getBaseUrl();
 ```
+
+##### adding js that require some other js in phtml
+```js
+<script type="text/javascript">
+  require([ 'jquery'], function($){ $(document).ready(function($) {
+    // jscoque
+  }); });
+</script>
+```
