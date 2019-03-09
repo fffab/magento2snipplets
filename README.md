@@ -1,15 +1,7 @@
 # magento2snipplets
 Some quickies Magento 2 snipplets
 
-###### Login with \Alekseon\Logger\Logger
-https://packagist.org/packages/alekseon/logger
-```php
-$message    = 'something';
-$fileName   = 'payment.log';
-\Alekseon\Logger\Logger::info($message, $fileName);
-```
-
-#### cli 
+##### cli 
 
 ###### php bin/magento modules stuff
 
@@ -29,12 +21,12 @@ php bin/magento cache:clear - c:c
 php bin/magento cache:flush - c:f
 ```
 
-##### remove code generated
+###### remove code generated
 ```cli
 rm -r generated/code
 ```
 
-#### phtlm 
+##### phtlm 
 
 ###### call helper in phtml, fast
 ```php
@@ -60,3 +52,14 @@ $this->getBaseUrl();
   }); });
 </script>
 ```
+
+##### using third party librairires
+
+###### Login with \Alekseon\Logger\Logger
+https://packagist.org/packages/alekseon/logger
+```php
+$message    = 'something';
+$fileName   = 'payment.log';
+\Alekseon\Logger\Logger::info($message, $fileName);
+```
+
