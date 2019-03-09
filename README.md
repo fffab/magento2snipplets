@@ -36,3 +36,8 @@ $_myHelper->myFunction();
 ```php
 echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('blockIdentifier')->toHtml();
 ```
+
+##### get base url in phtml (most of the cases it works)
+```php
+$this->getBaseUrl();
+```
