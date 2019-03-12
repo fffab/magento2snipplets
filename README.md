@@ -63,3 +63,7 @@ $fileName   = 'payment.log';
 \Alekseon\Logger\Logger::info($message, $fileName);
 ```
 
+setup_module -> supprimer la ligne
+app/config -> supprimer la ligne
+database -> supprimer les tables
+setup:upgrade
