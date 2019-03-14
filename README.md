@@ -66,7 +66,11 @@ $fileName   = 'payment.log';
 ##### hacks
 
 ###### remove a module installed by ftp
+
 Table : setup_module, delete the according line
+
 File  : app/ect/config.php, delete the according line
+
 Database : delete the according tables if any
+
 Cli : setup:upgrade
