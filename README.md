@@ -63,7 +63,10 @@ $fileName   = 'payment.log';
 \Alekseon\Logger\Logger::info($message, $fileName);
 ```
 
-setup_module -> supprimer la ligne
-app/config -> supprimer la ligne
-database -> supprimer les tables
-setup:upgrade
+##### hacks
+
+###### remove a module installed by ftp
+Table : setup_module, delete the according line
+File  : app/ect/config.php, delete the according line
+Database : delete the according tables if any
+Cli : setup:upgrade
