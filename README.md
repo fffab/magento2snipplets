@@ -74,3 +74,16 @@ File  : app/ect/config.php, delete the according line
 Database : delete the according tables if any
 
 Cli : setup:upgrade
+
+
+###### products not showing up in catogeries
+
+1.General->Status = Enabled
+2.general->Visibility = Catalog,Search (at last Catalog)
+3.Inventory->Qty > 0
+4.Inventory->Stock Availability = In Stock
+5.Websites = checking your site
+6.Catgories = checking your category.
+
+optionnal - php bin/magento setup:static-content:deploy
+php bin/magento indexer:reindex
