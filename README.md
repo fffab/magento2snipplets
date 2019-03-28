@@ -86,3 +86,8 @@ Cli : setup:upgrade
 optionnal - php bin/magento setup:static-content:deploy
 php bin/magento indexer:reindex
 ```
+
+##### backoffice
+
+###### noindex / nofollow
+Content > Design > Configuration > Choose Overall Design (Edit) > Search Engines Robots
