@@ -87,6 +87,22 @@ optionnal - php bin/magento setup:static-content:deploy
 php bin/magento indexer:reindex
 ```
 
+###### limit street field length in checkout
+https://magento.stackexchange.com/questions/143337/add-html-attribute-in-checkout-street-address/143352#143352
+
+###### limit street field length in address book
+app/design/frontend/Theme/vendor_name/Magento_Customer/templates/address/edit.phtml
+````
+<input type="text" name="street[]"
+       value="<?= $block->escapeHtmlAttr($block->getStreetLine($_i + 1)) ?>"
+       title="<?= $block->escapeHtmlAttr(__('Street Address %1', $_i + 1)) ?>"
+       id="street_<?= /* @noEscape */ $_i + 1 ?>"
+       class="input-text <?= $block->escapeHtmlAttr($_streetValidationClass) ?>"
+       maxlength="38">
+````
+
+
+
 ##### backoffice
 
 ###### noindex / nofollow
