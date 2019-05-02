@@ -66,6 +66,8 @@ $fileName   = 'payment.log';
 ##### hacks
 
 ###### log levels
+vendor/magento/framework/Logger/Handler/System.php
+vendor/psr/log/Psr/Log/LogLevel.php
 ```php
     const EMERGENCY = 'emergency';
     const ALERT     = 'alert';
