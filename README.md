@@ -65,6 +65,18 @@ $fileName   = 'payment.log';
 
 ##### hacks
 
+###### log levels
+```php
+    const EMERGENCY = 'emergency';
+    const ALERT     = 'alert';
+    const CRITICAL  = 'critical';
+    const ERROR     = 'error';
+    const WARNING   = 'warning';
+    const NOTICE    = 'notice';
+    const INFO      = 'info';
+    const DEBUG     = 'debug';
+```
+
 ###### remove a module installed by ftp
 
 ```
