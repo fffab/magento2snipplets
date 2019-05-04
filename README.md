@@ -121,3 +121,26 @@ app/design/frontend/Theme/vendor_name/Magento_Customer/templates/address/edit.ph
 
 ###### noindex / nofollow
 Content > Design > Configuration > Choose Overall Design (Edit) > Search Engines Robots
+
+###### Menu xml in backend
+````
+System  (Magento_Backend::system)
+  Report  (Magento_Backend::system_report)
+  Tools   (Magento_Backend::system_tools)
+  Data Transfer   (Magento_Backend::system_convert)
+  Other Settings  (Magento_Backend::system_other_settings)
+  Extensions  (Magento_Integration::system_extensions)
+  Permissions (Magento_User::system_acl)
+Dashboard   (Magento_Backend::dashboard)
+System  (Magento_Backend::system)
+Marketing   (Magento_Backend::marketing)
+Content (Magento_Backend::content)
+Stores  (Magento_Backend::stores)
+Products    (Magento_Catalog::catalog)
+Cuurency     (Magento_Backend::system_currency)
+Customers   (Magento_Customer::customer)
+Find Partners & Extensions (Magento_Marketplace::partners)
+Reports    (Magento_Reports::report)
+Sales  (Magento_Sales::sales)
+````
+
