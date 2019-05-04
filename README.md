@@ -143,4 +143,4 @@ Find Partners & Extensions (Magento_Marketplace::partners)
 Reports    (Magento_Reports::report)
 Sales  (Magento_Sales::sales)
 ````
-
+https://alanstorm.com/magento_2_admin_menu_items/
