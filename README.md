@@ -26,6 +26,12 @@ php bin/magento cache:flush - c:f
 rm -r generated/code
 ```
 
+###### deploy mode
+```cli
+php bin/magento deploy:mode:show
+php bin/magento deploy:mode:set developer
+php bin/magento deploy:mode:set production
+```
 ##### phtlm 
 
 ###### call helper in phtml, fast
