@@ -31,6 +31,9 @@ rm -r generated/code
 php bin/magento deploy:mode:show
 php bin/magento deploy:mode:set developer
 php bin/magento deploy:mode:set production
+
+php bin/magento setup:static-content:deploy
+php bin/magento setup:static-content:deploy fr_FR (specify if it's not defaul language)
 ```
 ##### phtlm 
 
