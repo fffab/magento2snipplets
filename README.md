@@ -71,6 +71,9 @@ $this->getBaseUrl();
 </script>
 ```
 
+###### adding category attribute
+https://www.mageplaza.com/devdocs/magento-2-category-attributes-programmatically/
+
 ##### using third party librairires
 
 ###### Login with \Alekseon\Logger\Logger
