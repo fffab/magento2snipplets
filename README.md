@@ -165,3 +165,7 @@ Reports    (Magento_Reports::report)
 Sales  (Magento_Sales::sales)
 ````
 https://alanstorm.com/magento_2_admin_menu_items/
+
+
+Magento php7.2 - Packages
+sudo apt-get install php7.2-opcache php7.2-gd php7.2-mysql php7.2-curl php7.2-intl php7.2-xsl php7.2-mbstring php7.2-zip php7.2-bcmath php7.2-soap
