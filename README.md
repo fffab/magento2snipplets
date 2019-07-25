@@ -71,6 +71,24 @@ $this->getBaseUrl();
 </script>
 ```
 
+###### override
+https://www.classyllama.com/blog/template-override-m2
+
+##### override .html / ko
+create a module Vendor_Module
+add html to overide in view/frontend/web/template
+add requirejs-config.js in view/frontend
+like this one
+```js
+var config = {
+    map: {
+       '*': {
+           'Magento_CheckoutAgreements/template/checkout/checkout-agreements.html': 'Vendor_Module/template/checkout/checkout-agreements.html'
+       }
+    }
+};
+```
+
 ###### adding category attribute
 https://www.mageplaza.com/devdocs/magento-2-category-attributes-programmatically/
 
