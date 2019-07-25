@@ -1,9 +1,9 @@
 # magento2snipplets
 Some quickies Magento 2 snipplets
 
-##### cli 
+## cli 
 
-###### php bin/magento modules stuff
+### php bin/magento modules stuff
 
 ```cli
 php bin/magento module:status
@@ -12,7 +12,7 @@ php bin/magento module:disable Vendor_Module
 php bin/magento module:uninstall Vendor_Module
 ```
 
-###### php bin/magento cache
+### php bin/magento cache
 ```cli
 php bin/magento cache:status
 php bin/magento cache:disable
@@ -21,12 +21,12 @@ php bin/magento cache:clear - c:c
 php bin/magento cache:flush - c:f
 ```
 
-###### remove code generated
+### remove code generated
 ```cli
 rm -r generated/code
 ```
 
-###### deploy mode
+### deploy mode
 ```cli
 php bin/magento deploy:mode:show
 php bin/magento deploy:mode:set developer
@@ -35,7 +35,7 @@ php bin/magento setup:static-content:deploy
 php bin/magento setup:static-content:deploy fr_FR (specify if it's not defaul language)
 ```
 
-###### best way to deploy in production
+### best way to deploy in production
 ```cli
 php bin/magento setup:upgrade
 php bin/magento indexer:reindex
@@ -44,25 +44,25 @@ php bin/magento setup:di:compile
 php bin/magento setup:static-content:deploy (fr_FR -specify if it's not defaul language)
 ```
 
-##### phtlm 
+## phtlm 
 
-###### call helper in phtml, fast
+### call helper in phtml, fast
 ```php
 $_myHelper = $this->helper('Vendor\Module\Helper\Helpername');
 $_myHelper->myFunction();
 ```
 
-###### call static cms bloc in phtml, fast
+### call static cms bloc in phtml, fast
 ```php
 echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('blockIdentifier')->toHtml();
 ```
 
-###### get base url in phtml (most of the cases it works)
+### get base url in phtml (most of the cases it works)
 ```php
 $this->getBaseUrl();
 ```
 
-###### adding js that require some other js in phtml
+### adding js that require some other js in phtml
 ```js
 <script type="text/javascript">
   require([ 'jquery'], function($){ $(document).ready(function($) {
@@ -71,10 +71,7 @@ $this->getBaseUrl();
 </script>
 ```
 
-###### override
-https://www.classyllama.com/blog/template-override-m2
-
-##### override .html / ko
+### override .html / ko
 create a module Vendor_Module
 add html to overide in view/frontend/web/template
 add requirejs-config.js in view/frontend
@@ -89,22 +86,19 @@ var config = {
 };
 ```
 
-###### adding category attribute
+### override template
+https://www.classyllama.com/blog/template-override-m2
+
+
+## attributes
+
+### adding category attribute
 https://www.mageplaza.com/devdocs/magento-2-category-attributes-programmatically/
 
-##### using third party librairires
 
-###### Login with \Alekseon\Logger\Logger
-https://packagist.org/packages/alekseon/logger
-```php
-$message    = 'something';
-$fileName   = 'payment.log';
-\Alekseon\Logger\Logger::info($message, $fileName);
-```
+## others howtos
 
-##### hacks
-
-###### log levels
+### log levels
 vendor/magento/framework/Logger/Handler/System.php
 vendor/psr/log/Psr/Log/LogLevel.php
 ```php
@@ -118,7 +112,7 @@ vendor/psr/log/Psr/Log/LogLevel.php
     const DEBUG     = 'debug';
 ```
 
-###### remove a module installed by ftp
+### remove a module installed by ftp
 
 ```
 Table : setup_module, delete the according line
@@ -127,7 +121,7 @@ Database : delete the according tables if any
 Cli : setup:upgrade
 ```
 
-###### products not showing up in catogeries
+### products not showing up in catogeries
 ```
 1.General->Status = Enabled
 2.general->Visibility = Catalog,Search (at last Catalog)
@@ -140,10 +134,10 @@ optionnal - php bin/magento setup:static-content:deploy
 php bin/magento indexer:reindex
 ```
 
-###### limit street field length in checkout
+### limit street field length in checkout
 https://magento.stackexchange.com/questions/143337/add-html-attribute-in-checkout-street-address/143352#143352
 
-###### limit street field length in address book
+### limit street field length in address book
 app/design/frontend/Theme/vendor_name/Magento_Customer/templates/address/edit.phtml
 ````
 <input type="text" name="street[]"
@@ -155,13 +149,12 @@ app/design/frontend/Theme/vendor_name/Magento_Customer/templates/address/edit.ph
 ````
 
 
+## backoffice
 
-##### backoffice
-
-###### noindex / nofollow
+### noindex / nofollow
 Content > Design > Configuration > Choose Overall Design (Edit) > Search Engines Robots
 
-###### Menu xml in backend
+### Menu xml in backend
 ````
 System  (Magento_Backend::system)
   Report  (Magento_Backend::system_report)
@@ -185,5 +178,19 @@ Sales  (Magento_Sales::sales)
 https://alanstorm.com/magento_2_admin_menu_items/
 
 
-Magento php7.2 - Packages
+## installation
+
+### Magento php7.2 - Packages
+
 sudo apt-get install php7.2-opcache php7.2-gd php7.2-mysql php7.2-curl php7.2-intl php7.2-xsl php7.2-mbstring php7.2-zip php7.2-bcmath php7.2-soap
+
+
+## using third party librairires
+
+### Login with \Alekseon\Logger\Logger
+https://packagist.org/packages/alekseon/logger
+```php
+$message    = 'something';
+$fileName   = 'payment.log';
+\Alekseon\Logger\Logger::info($message, $fileName);
+```
