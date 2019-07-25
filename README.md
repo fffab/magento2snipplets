@@ -66,7 +66,7 @@ $this->getBaseUrl();
 ```js
 <script type="text/javascript">
   require([ 'jquery'], function($){ $(document).ready(function($) {
-    // jscoque
+    // jscode
   }); });
 </script>
 ```
