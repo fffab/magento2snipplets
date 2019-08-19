@@ -148,6 +148,11 @@ app/design/frontend/Theme/vendor_name/Magento_Customer/templates/address/edit.ph
        maxlength="38">
 ````
 
+### using log
+````
+$logger = \Magento\Framework\App\ObjectManager::getInstance()->get('\Psr\Log\LoggerInterface');
+$logger->debug(__METHOD__ . ' - ' . __LINE__);       
+````
 
 ## backoffice
 
