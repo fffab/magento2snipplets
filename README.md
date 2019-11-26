@@ -199,3 +199,9 @@ $message    = 'something';
 $fileName   = 'payment.log';
 \Alekseon\Logger\Logger::info($message, $fileName);
 ```
+
+### Theme Porto - Errors and pitfalls
+In case of config css not loading, 404 and finally not regenerating
+go to admin, configuration > porto > settings, save each levels again
+should be enough
+if note, try design, and even content > theme
