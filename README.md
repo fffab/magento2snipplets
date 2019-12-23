@@ -153,7 +153,7 @@ app/design/frontend/Theme/vendor_name/Magento_Customer/templates/address/edit.ph
 $logger = \Magento\Framework\App\ObjectManager::getInstance()->get('\Psr\Log\LoggerInterface');
 $logger->debug(__METHOD__ . ' - ' . __LINE__);       
 ````
-#### magento path hitn
+#### magento path hint
 Stores > Configuration > Advanced > Developer > Debug: Enable Template Path Hints for Admin/Front 
 
 ## backoffice
