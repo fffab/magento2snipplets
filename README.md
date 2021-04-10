@@ -153,6 +153,44 @@ app/design/frontend/Theme/vendor_name/Magento_Customer/templates/address/edit.ph
 $logger = \Magento\Framework\App\ObjectManager::getInstance()->get('\Psr\Log\LoggerInterface');
 $logger->debug(__METHOD__ . ' - ' . __LINE__);       
 ````
+or
+````
+    protected $_logger;
+ 
+    public function __construct(
+        \Psr\Log\LoggerInterface $logger,
+        ...
+    )
+    {        
+        $this->_logger = $logger;
+    }
+    
+    function... {
+        $this->_logger->debug('debug1234'); 
+        //Output: [2017-02-22 04:48:44] main.DEBUG: debug1234 {"is_exception":false} []
+        
+        $this->_logger->info('info1234'); 
+        // Write to default log file: var/log/system.log
+        //Output: [2017-02-22 04:52:56] main.INFO: info1234 [] []
+        
+        $this->_logger->alert('alert1234'); 
+        // Write to default log file: var/log/system.log
+        //Output: [2017-02-22 04:52:56] main.ALERT: alert1234 [] []
+        
+        $this->_logger->notice('notice1234'); 
+        // Write to default log file: var/log/system.log
+        //Output: [2017-02-22 04:52:56] main.NOTICE: notice1234 [] []
+        
+        // Write to default log file: var/log/system.log
+        $this->_logger->error('error1234'); 
+        //Output: [2017-02-22 04:52:56] main.ERROR: error1234 [] []
+        
+         // Write to default log file: var/log/system.log
+        $this->_logger->critical('critical1234'); 
+        //Output: [2017-02-22 04:52:56] main.CRITICAL: critical1234 [] []
+     }
+````
+
 #### magento path hint
 Stores > Configuration > Advanced > Developer > Debug: Enable Template Path Hints for Admin/Front 
 
