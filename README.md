@@ -133,6 +133,10 @@ Cli : setup:upgrade
 optionnal - php bin/magento setup:static-content:deploy
 php bin/magento indexer:reindex
 ```
+### re-index only products
+```
+php bin/magento indexer:reindex catalog_product_flat catalog_category_flat catalog_category_product catalog_product_category catalogrule_rule catalog_product_attribute catalog_product_price catalogrule_product cataloginventory_stock catalogsearch_fulltext
+```
 
 ### limit street field length in checkout
 https://magento.stackexchange.com/questions/143337/add-html-attribute-in-checkout-street-address/143352#143352
